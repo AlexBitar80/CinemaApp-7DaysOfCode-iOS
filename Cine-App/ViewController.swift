@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    // MARK: - Lifecyle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configureUI()
     }
-
-
+    
+    // MARK: - Helpers
+    
+    func configureUI() {
+        view.backgroundColor = .purple
+    }
 }
-
