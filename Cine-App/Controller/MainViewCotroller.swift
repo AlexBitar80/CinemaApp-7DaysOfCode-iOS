@@ -11,17 +11,11 @@ class MainViewController: UIViewController {
     
     // MARK: - Properties
     
-    var movies: [Movie] {
-        return [
-            Movie(id: 2, title: "Homem Aranha", releaseDate: "2020-05-04", image: nil, overview: "", voteAverage: 5.0),
-            Movie(id: 4, title: "Órfã 2: A Origem", releaseDate: "2022-07-27", image: nil, overview: "", voteAverage: 7.8),
-            Movie(id: 5, title: "Minions 2: A Origem de Gru", releaseDate: "2022-06-29", image: nil, overview: "", voteAverage: 7.5),
-            Movie(id: 7, title: "Thor: Amor e Trovão", releaseDate: "2020-05-04", image: nil, overview: "", voteAverage: 8.0)
-        ]
-    }
-    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .darkPurple
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 140
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -63,7 +57,7 @@ class MainViewController: UIViewController {
     func configureTableView() {
         tableView.backgroundColor = .darkPurple
         tableView.separatorStyle = .none
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.reuseIdentifier)
         tableView.dataSource = self
     }
     
@@ -77,17 +71,22 @@ class MainViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate and UITableViewDataSource
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return Movie.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: MovieTableViewCell.reuseIdentifier,
+            for: indexPath
+        ) as? MovieTableViewCell else { return MovieTableViewCell() }
+    
+        cell.titleMovie.text = Movie.movies[indexPath.row].title
+        cell.releaseDateMovie.text = "Lançamento: \(Movie.movies[indexPath.row].releaseDate ?? "")"
         
-        cell.textLabel?.text = movies[indexPath.row].title
-        cell.textLabel?.textColor = .white
-        cell.contentView.backgroundColor = .darkPurple
         return cell
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE5CC9682925D78D00E03783 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9672925D78D00E03783 /* Movie.swift */; };
 		CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */; };
+		CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */; };
 		CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F129259CDD00370521 /* AppDelegate.swift */; };
 		CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F329259CDD00370521 /* SceneDelegate.swift */; };
 		CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F529259CDD00370521 /* MainViewCotroller.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		CE5CC9672925D78D00E03783 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CEC673EE29259CDD00370521 /* Cine-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cine-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC673F129259CDD00370521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC673F329259CDD00370521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CE5CC96C2925D9C100E03783 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CEC673E529259CDD00370521 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		CEC673F029259CDD00370521 /* Cine-App */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CC96C2925D9C100E03783 /* Views */,
 				CE5CC9692925D7A300E03783 /* Extensions */,
 				CE5CC9662925D75B00E03783 /* Controller */,
 				CE5CC9652925D75400E03783 /* Model */,
@@ -166,6 +177,7 @@
 			files = (
 				CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */,
 				CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */,
+				CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */,
 				CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */,
 				CE5CC9682925D78D00E03783 /* Movie.swift in Sources */,
 				CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */,
