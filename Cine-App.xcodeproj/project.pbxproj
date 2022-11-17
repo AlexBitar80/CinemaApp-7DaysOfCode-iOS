@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D79DAB3A65FAA8A5CA8CE7D /* Pods_Cine_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72A8CA78B9D9E74C06F665 /* Pods_Cine_App.framework */; };
 		CE5CC9682925D78D00E03783 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9672925D78D00E03783 /* Movie.swift */; };
 		CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */; };
 		CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */; };
 		CE5CC9722925DBF700E03783 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9712925DBF700E03783 /* MovieService.swift */; };
 		CE5CC9742925DC1400E03783 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9732925DC1400E03783 /* Constants.swift */; };
-		CE5CC9762925DC6900E03783 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */; };
 		CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F129259CDD00370521 /* AppDelegate.swift */; };
 		CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F329259CDD00370521 /* SceneDelegate.swift */; };
 		CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F529259CDD00370521 /* MainViewCotroller.swift */; };
@@ -26,7 +26,6 @@
 		CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CE5CC9712925DBF700E03783 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		CE5CC9732925DC1400E03783 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		CEC673EE29259CDD00370521 /* Cine-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cine-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC673F129259CDD00370521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC673F329259CDD00370521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +33,9 @@
 		CEC673FA29259CDE00370521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC673FD29259CDE00370521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC673FF29259CDE00370521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC754995BC1D022B656FB510 /* Pods-Cine-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cine-App.debug.xcconfig"; path = "Target Support Files/Pods-Cine-App/Pods-Cine-App.debug.xcconfig"; sourceTree = "<group>"; };
+		EF72A8CA78B9D9E74C06F665 /* Pods_Cine_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cine_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2AC8E40F9B9585FEAD9CEA /* Pods-Cine-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cine-App.release.xcconfig"; path = "Target Support Files/Pods-Cine-App/Pods-Cine-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D79DAB3A65FAA8A5CA8CE7D /* Pods_Cine_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456D6C082F67E2DFFA479AB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF72A8CA78B9D9E74C06F665 /* Pods_Cine_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE5CC9652925D75400E03783 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */,
-				CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,6 +111,8 @@
 			children = (
 				CEC673F029259CDD00370521 /* Cine-App */,
 				CEC673EF29259CDD00370521 /* Products */,
+				DBBB118500DBC1F23CE13DD2 /* Pods */,
+				456D6C082F67E2DFFA479AB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +142,16 @@
 			path = "Cine-App";
 			sourceTree = "<group>";
 		};
+		DBBB118500DBC1F23CE13DD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC754995BC1D022B656FB510 /* Pods-Cine-App.debug.xcconfig */,
+				FD2AC8E40F9B9585FEAD9CEA /* Pods-Cine-App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC6740229259CDE00370521 /* Build configuration list for PBXNativeTarget "Cine-App" */;
 			buildPhases = (
+				49C83045B7DCA3106E03DBA5 /* [CP] Check Pods Manifest.lock */,
 				CEC673EA29259CDD00370521 /* Sources */,
 				CEC673EB29259CDD00370521 /* Frameworks */,
 				CEC673EC29259CDD00370521 /* Resources */,
+				649309748F7A49FF11465C1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +219,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49C83045B7DCA3106E03DBA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cine-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		649309748F7A49FF11465C1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cine-App/Pods-Cine-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cine-App/Pods-Cine-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cine-App/Pods-Cine-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEC673EA29259CDD00370521 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -203,7 +269,6 @@
 				CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */,
 				CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */,
 				CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */,
-				CE5CC9762925DC6900E03783 /* UIImageView+Extensions.swift in Sources */,
 				CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */,
 				CE5CC9682925D78D00E03783 /* Movie.swift in Sources */,
 				CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */,
@@ -342,6 +407,7 @@
 		};
 		CEC6740329259CDE00370521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC754995BC1D022B656FB510 /* Pods-Cine-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +435,7 @@
 		};
 		CEC6740429259CDE00370521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD2AC8E40F9B9585FEAD9CEA /* Pods-Cine-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

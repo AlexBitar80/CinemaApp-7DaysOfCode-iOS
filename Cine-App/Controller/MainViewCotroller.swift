@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
         
         title = "Filmes Populares"
         
-        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -101,9 +101,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? MovieTableViewCell else { return MovieTableViewCell() }
     
-        cell.imageMovie.loadFrom(url: movies[indexPath.row].poster_path ?? "")
-        cell.titleMovie.text = movies[indexPath.row].title
-        cell.releaseDateMovie.text = "Lançamento: \(movies[indexPath.row].release_date ?? "")"
+        cell.configureCell(movie: movies[indexPath.row])
         
         return cell
     }

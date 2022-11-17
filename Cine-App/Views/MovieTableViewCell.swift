@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
     
@@ -44,7 +45,6 @@ class MovieTableViewCell: UITableViewCell {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
         image.layer.masksToBounds = true
-        image.image = UIImage(named: "thor-image")
         image.layer.cornerRadius = 8
         return image
     }()
@@ -82,6 +82,19 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     // MARK: - Helpers
+    
+    private func configureImage(_ imageURL: String) {
+       let url = URL(string: "https://image.tmdb.org/t/p/w500\(imageURL)")
+        imageMovie.kf.setImage(with: url)
+    }
+    
+    func configureCell(movie: Movie) {
+        titleMovie.text = movie.title
+        releaseDateMovie.text = movie.release_date
+        guard let imageURL = movie.poster_path else { return }
+        
+        configureImage(imageURL)
+    }
     
     func configureUI() {
         addSubview(mainStackView)
