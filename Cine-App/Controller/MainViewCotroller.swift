@@ -37,7 +37,6 @@ class MainViewController: UIViewController {
         
         tableView.delegate = self
         
-    
         configureUI()
         configureTableView()
         setConstraints()
@@ -46,7 +45,7 @@ class MainViewController: UIViewController {
     
     // MARK: - API
     
-    func fetchPopularMovies() {
+    private func fetchPopularMovies() {
         MovieService.shared.fetchPopularMovies { movie in
             self.movies = movie.results
         }
