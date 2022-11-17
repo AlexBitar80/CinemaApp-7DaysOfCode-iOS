@@ -10,6 +10,9 @@
 		CE5CC9682925D78D00E03783 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9672925D78D00E03783 /* Movie.swift */; };
 		CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */; };
 		CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */; };
+		CE5CC9722925DBF700E03783 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9712925DBF700E03783 /* MovieService.swift */; };
+		CE5CC9742925DC1400E03783 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9732925DC1400E03783 /* Constants.swift */; };
+		CE5CC9762925DC6900E03783 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */; };
 		CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F129259CDD00370521 /* AppDelegate.swift */; };
 		CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F329259CDD00370521 /* SceneDelegate.swift */; };
 		CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC673F529259CDD00370521 /* MainViewCotroller.swift */; };
@@ -21,6 +24,9 @@
 		CE5CC9672925D78D00E03783 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		CE5CC9712925DBF700E03783 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		CE5CC9732925DC1400E03783 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		CEC673EE29259CDD00370521 /* Cine-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cine-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC673F129259CDD00370521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC673F329259CDD00370521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5CC96A2925D7B500E03783 /* UIColor+Extensions.swift */,
+				CE5CC9752925DC6900E03783 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -71,6 +78,22 @@
 				CE5CC96D2925D9ED00E03783 /* MovieTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE5CC96F2925DBD900E03783 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CC9712925DBF700E03783 /* MovieService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CE5CC9702925DBDF00E03783 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CC9732925DC1400E03783 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEC673E529259CDD00370521 = {
@@ -92,6 +115,8 @@
 		CEC673F029259CDD00370521 /* Cine-App */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CC9702925DBDF00E03783 /* Utils */,
+				CE5CC96F2925DBD900E03783 /* API */,
 				CE5CC96C2925D9C100E03783 /* Views */,
 				CE5CC9692925D7A300E03783 /* Extensions */,
 				CE5CC9662925D75B00E03783 /* Controller */,
@@ -178,9 +203,12 @@
 				CEC673F629259CDD00370521 /* MainViewCotroller.swift in Sources */,
 				CE5CC96B2925D7B500E03783 /* UIColor+Extensions.swift in Sources */,
 				CE5CC96E2925D9ED00E03783 /* MovieTableViewCell.swift in Sources */,
+				CE5CC9762925DC6900E03783 /* UIImageView+Extensions.swift in Sources */,
 				CEC673F229259CDD00370521 /* AppDelegate.swift in Sources */,
 				CE5CC9682925D78D00E03783 /* Movie.swift in Sources */,
 				CEC673F429259CDD00370521 /* SceneDelegate.swift in Sources */,
+				CE5CC9722925DBF700E03783 /* MovieService.swift in Sources */,
+				CE5CC9742925DC1400E03783 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+let MOVIE_API_KEY = "f43b86b993ee7769cfac29d364efbc8f"

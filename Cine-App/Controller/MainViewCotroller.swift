@@ -11,6 +11,14 @@ class MainViewController: UIViewController {
     
     // MARK: - Properties
     
+    private var movies: [Movie] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .darkPurple
@@ -28,10 +36,20 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
         
         tableView.delegate = self
+        
     
         configureUI()
         configureTableView()
         setConstraints()
+        fetchPopularMovies()
+    }
+    
+    // MARK: - API
+    
+    func fetchPopularMovies() {
+        MovieService.shared.fetchPopularMovies { movie in
+            self.movies = movie.results
+        }
     }
     
     // MARK: - Helpers
@@ -75,7 +93,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Movie.movies.count
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,8 +102,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? MovieTableViewCell else { return MovieTableViewCell() }
     
-        cell.titleMovie.text = Movie.movies[indexPath.row].title
-        cell.releaseDateMovie.text = "Lançamento: \(Movie.movies[indexPath.row].releaseDate ?? "")"
+        cell.imageMovie.loadFrom(url: movies[indexPath.row].poster_path ?? "")
+        cell.titleMovie.text = movies[indexPath.row].title
+        cell.releaseDateMovie.text = "Lançamento: \(movies[indexPath.row].release_date ?? "")"
         
         return cell
     }
