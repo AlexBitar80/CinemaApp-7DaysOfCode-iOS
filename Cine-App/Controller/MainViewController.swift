@@ -43,6 +43,12 @@ class MainViewController: UIViewController {
         fetchPopularMovies()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     // MARK: - API
     
     private func fetchPopularMovies() {
@@ -57,8 +63,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .darkPurple
         
         title = "Filmes Populares"
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Voltar", style: .plain, target: nil, action: nil)
         
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -104,5 +109,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(movie: movies[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = DetailMovieViewController()
+        controller.getDetail(movieDetail: movies[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

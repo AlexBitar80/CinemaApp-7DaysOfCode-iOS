@@ -84,13 +84,15 @@ class MovieTableViewCell: UITableViewCell {
     // MARK: - Helpers
     
     private func configureImage(_ imageURL: String) {
-       let url = URL(string: "https://image.tmdb.org/t/p/w500\(imageURL)")
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(imageURL)")
         imageMovie.kf.setImage(with: url)
     }
     
     func configureCell(movie: Movie) {
+        guard let releaseDate = movie.release_date else { return }
+        
         titleMovie.text = movie.title
-        releaseDateMovie.text = movie.release_date
+        releaseDateMovie.text = "Lançamento: \(releaseDate.formatDate())"
         guard let imageURL = movie.poster_path else { return }
         
         configureImage(imageURL)
